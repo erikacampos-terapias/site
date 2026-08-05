@@ -37,6 +37,7 @@ if (!post) {
       <span class="date">${formatarData(post.data)}</span>
     </div>
     <h1>${post.titulo}</h1>
+    ${post.autor ? `<p class="post-author">Por ${post.autor}</p>` : ''}
     <div class="post-cover"><img src="${post.capa}" alt="${post.titulo}"></div>
     <div class="post-body">
       ${post.conteudo.map(renderBloco).join('')}

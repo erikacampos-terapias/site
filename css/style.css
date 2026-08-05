@@ -24,9 +24,9 @@
   img{max-width:100%;display:block;}
   a{color:inherit;text-decoration:none;}
   .wrap{max-width:1180px;margin:0 auto;padding-inline:24px;}
-  section{padding-block:60px;position:relative;}
-  @media (min-width:768px){section{padding-block:96px;}}
-  @media (min-width:1024px){section{padding-block:140px;}}
+  section{padding-block:16px;position:relative;}
+  @media (min-width:768px){section{padding-block:28px;}}
+  @media (min-width:1024px){section{padding-block:40px;}}
 
   h1,h2,h3,.serif{font-family:'Fraunces',serif;letter-spacing:-.01em;}
   h1{font-size:clamp(2.25rem,6vw,5rem);font-weight:600;line-height:1.04;margin:0;}
@@ -51,7 +51,7 @@
     max-width:1180px;margin:0 auto;padding:10px 24px;
     display:flex;align-items:center;justify-content:space-between;
   }
-  .nav-logo img{height:68px;width:auto;}
+  .nav-logo img{height:68px;width:auto;margin-top:10px;}
   nav.links{display:none;align-items:center;gap:32px;}
   @media (min-width:1024px){nav.links{display:flex;}}
   nav.links a{
@@ -99,7 +99,7 @@
     min-height:100vh;display:flex;align-items:center;
     padding-top:150px;padding-bottom:60px;
   }
-  .hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center;}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:start;}
   @media (min-width:1024px){.hero-grid{grid-template-columns:1.1fr .9fr;gap:64px;}}
   .hero-kinetic .word{display:inline-block;overflow:hidden;}
   .hero-kinetic .word span{display:inline-block;transform:translateY(110%);}
@@ -126,7 +126,7 @@
   @keyframes scrolldown{0%{transform:translateY(-100%);}100%{transform:translateY(250%);}}
 
   /* ---------- SOBRE ---------- */
-  .sobre-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center;}
+  .sobre-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:start;}
   @media (min-width:1024px){.sobre-grid{grid-template-columns:.85fr 1.15fr;gap:80px;}}
   .sobre-media{border-radius:20px;overflow:hidden;position:relative;aspect-ratio:3/4;}
   .sobre-media img{width:100%;height:130%;object-fit:cover;filter:sepia(.15) saturate(.9);will-change:transform;}
@@ -136,20 +136,25 @@
   .pillar .n{font-family:'Fraunces',serif;color:var(--terracota);font-size:.85rem;letter-spacing:.05em;}
   .pillar h3{margin-top:8px;}
   .pillar p{margin-top:8px;font-size:.95rem;}
+  .formacao-note{margin-top:32px;padding-top:24px;border-top:1px solid var(--linha);}
+  .formacao-note p{font-size:.82rem;line-height:1.6;color:var(--carvao-suave);max-width:520px;}
 
   /* ---------- TÉCNICAS ---------- */
   .section-elevated{background:var(--creme-elevado);}
+  .tecnicas-intro{display:grid;grid-template-columns:1fr;gap:32px;align-items:start;}
+  @media (min-width:1024px){.tecnicas-intro{grid-template-columns:1.3fr 1fr;gap:48px;}}
+  .tecnica-featured{border:1px solid var(--linha);border-radius:16px;}
   .tecnicas-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--linha);border:1px solid var(--linha);border-radius:18px;overflow:hidden;margin-top:56px;}
   @media (min-width:640px){.tecnicas-grid{grid-template-columns:1fr 1fr;}}
   @media (min-width:1024px){.tecnicas-grid{grid-template-columns:1fr 1fr 1fr;}}
   .tecnica-card{background:var(--creme-elevado);padding:36px 30px;transition:background .3s var(--ease);}
   .tecnica-card:hover{background:var(--creme);}
-  .tecnica-card svg{width:26px;height:26px;stroke:var(--verde-escuro);stroke-width:1.4;fill:none;opacity:.85;margin-bottom:20px;}
+  .tecnica-card img{width:26px;height:26px;object-fit:contain;opacity:.85;margin-bottom:20px;display:block;}
   .tecnica-card h3{margin-bottom:10px;}
   .tecnica-card p{font-size:.92rem;}
 
   /* ---------- PARA QUEM É ---------- */
-  .paraquem-grid{display:grid;grid-template-columns:1fr;gap:56px;margin-top:48px;}
+  .paraquem-grid{display:grid;grid-template-columns:1fr;gap:56px;margin-top:24px;align-items:start;}
   @media (min-width:768px){.paraquem-grid{grid-template-columns:1fr 1fr;}}
   .sintoma-list{display:flex;flex-direction:column;}
   .sintoma-item{
@@ -206,15 +211,16 @@
   .blog-cta{margin-top:44px;text-align:center;}
 
   /* ---------- CONTATO ---------- */
-  .contato-grid{display:grid;grid-template-columns:1fr;gap:48px;margin-top:48px;}
+  .contato-grid{display:grid;grid-template-columns:1fr;gap:48px;margin-top:24px;}
   @media (min-width:1024px){.contato-grid{grid-template-columns:1fr 1fr;}}
+  .contato-cards{display:flex;flex-direction:column;}
   .contato-card{
     display:flex;align-items:center;gap:20px;padding:26px 24px;border:1px solid var(--linha);
     border-radius:16px;transition:border-color .3s var(--ease), transform .3s var(--ease);margin-bottom:16px;
   }
   .contato-card:hover{border-color:var(--terracota);transform:translateX(4px);}
-  .contato-card .icon{width:44px;height:44px;border-radius:50%;background:var(--creme-elevado);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-  .contato-card .icon svg{width:20px;height:20px;stroke:var(--verde-escuro);fill:none;stroke-width:1.6;}
+  .contato-card .icon{width:44px;height:44px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .contato-card .icon svg{width:30px;height:30px;stroke:var(--verde-escuro);fill:none;stroke-width:1.5;}
   .contato-card h3{font-size:1rem;}
   .contato-card p{font-size:.85rem;margin-top:4px;}
   .regioes-card{
@@ -222,11 +228,11 @@
     padding:36px 32px;
   }
   .regiao-item{
-    display:flex;align-items:center;gap:14px;padding:14px 0;border-top:1px solid var(--linha);
+    display:flex;align-items:center;gap:14px;padding:8px 0;border-top:1px solid var(--linha);
   }
   .regiao-item:first-of-type{border-top:none;}
-  .regiao-item .pin{width:34px;height:34px;border-radius:50%;background:var(--creme);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-  .regiao-item .pin svg{width:16px;height:16px;stroke:var(--terracota);fill:none;stroke-width:1.6;}
+  .regiao-item .pin{width:34px;height:34px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .regiao-item .pin svg{width:24px;height:24px;stroke:var(--terracota);fill:none;stroke-width:1.5;}
   .regiao-item span:last-child{font-size:.95rem;color:var(--carvao);}
 
   /* ---------- FOOTER ---------- */
