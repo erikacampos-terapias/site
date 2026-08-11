@@ -48,7 +48,7 @@ const posts = [
     resumo: "Um panorama simples sobre a visão integrativa da medicina chinesa e por que ela não separa dor física de desgaste emocional.",
     tag: "Filosofia MTC",
     autor: "Erika Campos",
-    data: "2026-07-30",
+    data: "2026-08-12",
     capa: "../assets/images/txt3umsistema.jpg",
     conteudo: [
       { tipo: "paragrafo", texto: "Um dos primeiros estranhamentos de quem chega pra uma sessão de Medicina Tradicional Chinesa é ouvir perguntas sobre o sono, o humor ou a rotina — quando a queixa era \"só\" uma dor no ombro. Isso não é acaso: na MTC, corpo, mente e emoções não são compartimentos separados, são expressões diferentes do mesmo sistema." },
@@ -70,7 +70,7 @@ const posts = [
     resumo: "Uma técnica milenar para dores de origem fria — explicada sem mistério, do que é feita até quando ela costuma ser indicada.",
     tag: "Técnica",
     autor: "Erika Campos",
-    data: "2026-08-03",
+    data: "2026-08-08",
     capa: "../assets/images/txt2moxa.jpg",
     conteudo: [
       { tipo: "paragrafo", texto: "Moxabustão é o nome da técnica que usa o calor da combustão de uma planta chamada Artemisia (a \"moxa\") sobre pontos específicos do corpo, geralmente os mesmos usados na acupuntura. O objetivo é aquecer, ativar a circulação de energia e sangue e aliviar dores que a MTC descreve como \"de origem fria\"." },
@@ -95,7 +95,7 @@ const posts = [
     resumo: "Meridianos, Zang-Fu e diagnóstico pelo pulso e pela língua — os pilares de uma tradição milenar, explicados sem complicação.",
     tag: "Medicina Tradicional Chinesa",
     autor: "Erika Campos",
-    data: "2026-05-03",
+    data: "2026-08-03",
     capa: "../assets/images/txt1MTC.jpg",
     conteudo: [
       { tipo: "paragrafo", texto: "A Medicina Tradicional Chinesa (MTC) existe há milhares de anos e parte de uma ideia simples: o corpo é um sistema conectado, e quando alguma coisa não vai bem, o desequilíbrio quase nunca fica isolado num único lugar. Um dos conceitos mais conhecidos dessa tradição são os meridianos — canais invisíveis por onde, segundo essa visão, circula a energia vital (o famoso Qi). É por isso que a acupuntura, por exemplo, pica pontos que às vezes parecem bem distantes do sintoma: a lógica é tratar o canal, não só o local da dor." },
