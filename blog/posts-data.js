@@ -68,7 +68,7 @@ const posts = [
     slug: "moxabustao-o-que-e",
     titulo: "Moxabustão: o calor que trata a raiz do problema",
     resumo: "Uma técnica milenar para dores de origem fria — explicada sem mistério, do que é feita até quando ela costuma ser indicada.",
-    tag: "Moxabustão",
+    tag: "Técnica",
     autor: "Erika Campos",
     data: "2026-08-03",
     capa: "../assets/images/txt2moxa.jpg",
