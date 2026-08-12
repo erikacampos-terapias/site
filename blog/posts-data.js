@@ -3,41 +3,46 @@
   POSTS DO BLOG — Erika Campos Terapias
   ===========================================================
 
-  Pra criar um post novo, copie o bloco { ... } de um post
-  existente (do "{" até o "}," dele), cole no TOPO do array
-  (logo depois de "const posts = [") e edite os campos:
+  ATUALIZAÇÃO: desde [ago/2026], cada post agora é um arquivo HTML
+  próprio dentro de blog/posts/ (ex: blog/posts/moxabustao-o-que-e.html),
+  pra ficar mais fácil de indexar no Google e ter preview correto
+  quando compartilhado no WhatsApp/Instagram.
+
+  ESTE ARQUIVO agora serve só pra alimentar o CARD da listagem
+  (a página blog/index.html) — ele NÃO controla mais o conteúdo
+  do post em si. O campo "conteudo" abaixo ficou só como referência/
+  backup do texto original; editar ele não muda nada na página do post.
+
+  Pra criar um post novo, são 2 passos:
+
+  PASSO 1 — copie o bloco { ... } de um post existente (do "{" até
+  o "}," dele), cole no TOPO do array (logo depois de "const posts = [")
+  e edite os campos:
 
   - slug:      identificador único do post, sem espaços/acentos.
-               Vira parte do link: post.html?slug=SEU-SLUG
-  - titulo:    título que aparece na listagem e na página do post
+               Precisa ser IGUAL ao nome do arquivo em blog/posts/
+               (ex: slug "moxabustao-o-que-e" → arquivo
+               "blog/posts/moxabustao-o-que-e.html")
+  - titulo:    título que aparece no card da listagem
   - resumo:    1-2 frases que aparecem no card da listagem
   - tag:       categoria curta (ex: "Auriculoterapia", "Moxabustão")
-  - autor:     nome de quem assina o post (ex: "Erika Campos"). Se remover
-               esse campo, o post não mostra nenhuma assinatura.
-  - data:      no formato "AAAA-MM-DD" (usado pra ordenar, mais
-               recente primeiro) — o texto exibido é gerado sozinho
-  - capa:      URL de uma imagem (pode usar Unsplash ou subir a
-               sua própria foto numa pasta e apontar o caminho)
-  - conteudo:  o texto do post. Cada item da lista é um bloco:
-                 { tipo: "paragrafo", texto: "..." }
-                 { tipo: "titulo",    texto: "..." }   (subtítulo H2)
-                 { tipo: "lista",     itens: ["...", "..."] }
-                 { tipo: "imagem",    url: "...", legenda: "..." }  (opcional)
+  - autor:     nome de quem assina (só usado como referência agora —
+               a assinatura real fica dentro do arquivo HTML do post)
+  - data:      no formato "AAAA-MM-DD" (usado pra ordenar a listagem,
+               mais recente primeiro)
+  - capa:      caminho da imagem de capa (mostrada no card)
+  - conteudo:  NÃO É MAIS USADO PRA RENDERIZAR O POST. Pode deixar
+               em branco ([]) ou preencher só como anotação sua —
+               é ignorado pela página do post.
 
-  O bloco "imagem" é OPCIONAL — use só quando tiver uma foto pra colocar
-  no meio do artigo. Se o post não tiver bloco "imagem", nada aparece
-  no lugar — sem buraco, sem placeholder. "legenda" também é opcional;
-  se não quiser legenda, é só remover essa linha do bloco.
+  PASSO 2 — crie o arquivo HTML do post: copie
+  blog/posts/_MODELO.html, renomeie pra blog/posts/SEU-SLUG.html,
+  e preencha os campos marcados com «...» dentro dele.
 
-  Exemplo de uso (coloque entre dois parágrafos, na ordem em que quer
-  que a foto apareça no texto):
+  Não esqueça também de adicionar uma linha nova no sitemap.xml
+  (na raiz do repositório) com a URL do post novo — isso ajuda o
+  Google a encontrar a página mais rápido.
 
-    { tipo: "paragrafo", texto: "..." },
-    { tipo: "imagem", url: "https://.../foto.jpg", legenda: "Aplicação de ventosas na região lombar." },
-    { tipo: "paragrafo", texto: "..." },
-
-  Depois de editar, salve o arquivo e suba pro GitHub — não precisa
-  rodar nenhum build, é só HTML/JS puro.
   ===========================================================
 */
 
@@ -48,7 +53,7 @@ const posts = [
     resumo: "Um panorama simples sobre a visão integrativa da medicina chinesa e por que ela não separa dor física de desgaste emocional.",
     tag: "Filosofia MTC",
     autor: "Erika Campos",
-    data: "2026-08-12",
+    data: "2026-07-30",
     capa: "../assets/images/txt3umsistema.jpg",
     conteudo: [
       { tipo: "paragrafo", texto: "Um dos primeiros estranhamentos de quem chega pra uma sessão de Medicina Tradicional Chinesa é ouvir perguntas sobre o sono, o humor ou a rotina — quando a queixa era \"só\" uma dor no ombro. Isso não é acaso: na MTC, corpo, mente e emoções não são compartimentos separados, são expressões diferentes do mesmo sistema." },
@@ -68,9 +73,9 @@ const posts = [
     slug: "moxabustao-o-que-e",
     titulo: "Moxabustão: o calor que trata a raiz do problema",
     resumo: "Uma técnica milenar para dores de origem fria — explicada sem mistério, do que é feita até quando ela costuma ser indicada.",
-    tag: "Técnica",
+    tag: "Moxabustão",
     autor: "Erika Campos",
-    data: "2026-08-08",
+    data: "2026-08-03",
     capa: "../assets/images/txt2moxa.jpg",
     conteudo: [
       { tipo: "paragrafo", texto: "Moxabustão é o nome da técnica que usa o calor da combustão de uma planta chamada Artemisia (a \"moxa\") sobre pontos específicos do corpo, geralmente os mesmos usados na acupuntura. O objetivo é aquecer, ativar a circulação de energia e sangue e aliviar dores que a MTC descreve como \"de origem fria\"." },
@@ -95,7 +100,7 @@ const posts = [
     resumo: "Meridianos, Zang-Fu e diagnóstico pelo pulso e pela língua — os pilares de uma tradição milenar, explicados sem complicação.",
     tag: "Medicina Tradicional Chinesa",
     autor: "Erika Campos",
-    data: "2026-08-03",
+    data: "2026-05-03",
     capa: "../assets/images/txt1MTC.jpg",
     conteudo: [
       { tipo: "paragrafo", texto: "A Medicina Tradicional Chinesa (MTC) existe há milhares de anos e parte de uma ideia simples: o corpo é um sistema conectado, e quando alguma coisa não vai bem, o desequilíbrio quase nunca fica isolado num único lugar. Um dos conceitos mais conhecidos dessa tradição são os meridianos — canais invisíveis por onde, segundo essa visão, circula a energia vital (o famoso Qi). É por isso que a acupuntura, por exemplo, pica pontos que às vezes parecem bem distantes do sintoma: a lógica é tratar o canal, não só o local da dor." },

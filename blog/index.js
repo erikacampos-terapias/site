@@ -16,7 +16,7 @@ if (ordenados.length === 0){
 } else {
   ordenados.forEach(post => {
     const row = document.createElement('a');
-    row.href = `post.html?slug=${encodeURIComponent(post.slug)}`;
+    row.href = `posts/${encodeURIComponent(post.slug)}.html`;
     row.className = 'post-row';
     row.innerHTML = `
       <div class="thumb"><img src="${post.capa}" alt="${post.titulo}" loading="lazy"></div>
