@@ -83,7 +83,7 @@ São 3 passos:
 **Passo 3 — avise o Google**
 1. Abra `sitemap.xml` (na raiz do site) e copie um bloco `<url>...</url>`.
 2. Cole um novo bloco com o link do seu post:
-   `https://erikacampos-terapias.github.io/site/blog/posts/SEU-SLUG.html`
+   `https://erikacamposterapias.com.br/blog/posts/SEU-SLUG.html`
 
 Salve tudo e suba pro GitHub (`git add`, `git commit`, `git push`) — o post
 aparece na listagem e já fica com link direto e preview corretos.

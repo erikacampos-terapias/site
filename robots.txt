@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://erikacampos-terapias.github.io/site/sitemap.xml
+Sitemap: https://erikacamposterapias.com.br/sitemap.xml
