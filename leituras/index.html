@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<script>
+  // Redireciona quem acessar pelo endereço antigo do GitHub Pages
+  // pro domínio novo, mantendo o caminho da página.
+  (function(){
+    if (location.hostname === 'erikacampos-terapias.github.io') {
+      var novoCaminho = location.pathname.replace(/^\/site/, '');
+      location.replace('https://erikacamposterapias.com.br' + novoCaminho + location.search + location.hash);
+    }
+  })();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leituras — Erika Campos Terapias</title>
+<meta name="description" content="Artigos sobre Medicina Tradicional Chinesa, dor, ansiedade e as técnicas usadas nos atendimentos.">
+<meta property="og:title" content="Leituras — Erika Campos Terapias">
+<meta property="og:site_name" content="Erika Campos Terapias">
+<meta property="og:description" content="Artigos sobre Medicina Tradicional Chinesa, dor, ansiedade e as técnicas usadas nos atendimentos.">
+<meta property="og:image" content="../assets/images/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://erikacamposterapias.com.br/leituras/index.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6F4D3SC7S0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6F4D3SC7S0');
+</script>
+</head>
+<body>
+
+<header class="blognav">
+  <div class="blognav-inner">
+    <a href="../index.html"><img src="../assets/LogoCompleto_horizontal_fundo_claro.svg" alt="Erika Campos Terapias"></a>
+    <a class="back" href="../index.html">← Voltar ao site</a>
+  </div>
+</header>
+
+<div class="wrap blog-hero">
+  <span class="eyebrow">Leituras</span>
+  <h1>Medicina Tradicional Chinesa, sem mistério</h1>
+  <p style="margin-top:18px;max-width:560px;">Artigos sobre as técnicas, os sintomas mais comuns e a forma como a MTC entende o corpo — pra você chegar mais informado antes da primeira sessão.</p>
+</div>
+
+<div class="wrap">
+  <div class="post-list" id="postList"></div>
+  <div id="emptyState"><p>Nenhum post encontrado ainda. Volte em breve!</p></div>
+</div>
+
+<footer class="blogfoot">
+  <p>© <span id="year"></span> Erika Campos Terapias · <a href="../index.html" style="color:var(--terracota);">voltar ao site</a></p>
+  <p style="margin-top:6px;font-size:.72rem;opacity:.75;">Todos os direitos reservados. É proibida a reprodução total ou parcial deste conteúdo sem autorização prévia.</p>
+</footer>
+
+<script src="posts-data.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

@@ -18,10 +18,10 @@ site/
 │   ├── LogoCompleto_vertical_fundo_claro.svg
 │   ├── LogoCompleto_vertical_fundo_escuro.svg
 │   └── images/                 → ⭐ fotos do site (hoje são placeholders — veja abaixo)
-└── blog/
+└── leituras/
     ├── index.html               → listagem de posts (lê os cards de posts-data.js)
     ├── index.js                  → lógica da listagem
-    ├── style.css                 → estilo do blog (mesma paleta da landing)
+    ├── style.css                 → estilo das Leituras (mesma paleta da landing)
     ├── posts-data.js             → alimenta os CARDS da listagem (não o conteúdo do post)
     └── posts/                    → ⭐ AQUI vivem os posts, um arquivo HTML por post
         ├── _MODELO.html           → copie este pra criar um post novo
@@ -37,6 +37,16 @@ prática recomendada do GitHub Pages: ele avisa que o site é HTML puro, sem
 processamento Jekyll — evita qualquer comportamento inesperado com pastas
 ou nomes de arquivo específicos.
 
+## Sobre a pasta `blog/` antiga
+
+A pasta `leituras/` substituiu a antiga `blog/` (URLs mais limpas). A pasta
+`blog/` **ainda existe no repositório de propósito** — ela guarda 4 páginas
+bem simples que só redirecionam automaticamente pra URL nova
+correspondente em `leituras/`. Isso existe pra não quebrar links que já
+foram compartilhados ou indexados pelo Google enquanto o endereço era
+`/blog/`. Não edite os arquivos dentro de `blog/` — qualquer post novo ou
+mudança de conteúdo deve ser feita só dentro de `leituras/`.
+
 ## Como publicar no GitHub Pages
 
 1. Crie um repositório no GitHub (ex: `erika-campos-terapias`).
@@ -49,24 +59,24 @@ ou nomes de arquivo específicos.
 
 Não precisa de build, Node, nem nenhuma ferramenta — é HTML puro.
 
-## Como adicionar um novo post no blog
+## Como adicionar um novo post nas Leituras
 
 Desde a última atualização, cada post é um **arquivo HTML próprio** dentro
-de `blog/posts/` — isso melhora a indexação no Google e garante que o link
+de `leituras/posts/` — isso melhora a indexação no Google e garante que o link
 apareça certo quando compartilhado no WhatsApp ou Instagram (esses apps não
 executam JavaScript, então precisam do conteúdo já pronto no HTML).
 
 São 3 passos:
 
 **Passo 1 — crie o arquivo do post**
-1. Copie `blog/posts/_MODELO.html`.
-2. Renomeie a cópia pra `blog/posts/SEU-SLUG.html` (ex: `ventosaterapia-dor-lombar.html`).
+1. Copie `leituras/posts/_MODELO.html`.
+2. Renomeie a cópia pra `leituras/posts/SEU-SLUG.html` (ex: `ventosaterapia-dor-lombar.html`).
 3. Abra o arquivo e preencha todos os campos marcados com `«...»` — título,
    resumo, categoria, data, foto de capa e o corpo do texto (parágrafos,
    subtítulos, listas, foto no meio do texto se quiser).
 
 **Passo 2 — adicione o card na listagem**
-1. Abra `blog/posts-data.js`.
+1. Abra `leituras/posts-data.js`.
 2. Copie um bloco `{ ... }` existente, cole no topo do array e edite:
 
    | Campo | O que é |
@@ -83,7 +93,7 @@ São 3 passos:
 **Passo 3 — avise o Google**
 1. Abra `sitemap.xml` (na raiz do site) e copie um bloco `<url>...</url>`.
 2. Cole um novo bloco com o link do seu post:
-   `https://erikacamposterapias.com.br/blog/posts/SEU-SLUG.html`
+   `https://erikacamposterapias.com.br/leituras/posts/SEU-SLUG.html`
 
 Salve tudo e suba pro GitHub (`git add`, `git commit`, `git push`) — o post
 aparece na listagem e já fica com link direto e preview corretos.
@@ -117,14 +127,10 @@ baixar a que mais combinar com o seu olhar:
 - **Sobre** (foto de atendimento/toque): [busca "massage therapy" no Unsplash](https://unsplash.com/s/photos/massage-therapy)
 - **Capas do blog** (mais soltas, podem repetir o tema): [busca "traditional chinese medicine" no Unsplash](https://unsplash.com/s/photos/traditional-chinese-medicine) e [busca "chinese medicine" no Unsplash](https://unsplash.com/s/photos/chinese-medicine)
 
-## Outros pontos que você precisa preencher antes de publicar
+## Status atual (pendências que já foram resolvidas)
 
-- **Número de WhatsApp**: procure por `55XXXXXXXXXXX` em `index.html` e
-  `blog/post.html`, e troque pelo seu número completo com DDI + DDD
-  (ex: `5511987654321`).
-- **E-mail de contato**: `contato@erikacampos.com.br` em `index.html`.
-- **Link do Instagram**: `https://instagram.com/` em `index.html` — troque
-  pelo link do seu perfil.
-- **Depoimentos**: os três depoimentos da seção "Depoimentos" são
-  ilustrativos — substitua pelos relatos reais das suas clientes (com
-  autorização delas) antes de publicar.
+Número de WhatsApp, e-mail e Instagram já estão corretos em todo o site.
+O único ponto ainda pendente é a seção de Depoimentos: os relatos atuais
+são ilustrativos e a seção está comentada no código até a Erika ter
+depoimentos reais de clientes (com autorização delas) pra publicar.
+
