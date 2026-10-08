@@ -1,52 +1,14 @@
-/*
-  ===========================================================
-  POSTS DO BLOG — Erika Campos Terapias
-  ===========================================================
-
-  ATUALIZAÇÃO: desde [ago/2026], cada post agora é um arquivo HTML
-  próprio dentro de blog/posts/ (ex: blog/posts/moxabustao-o-que-e.html),
-  pra ficar mais fácil de indexar no Google e ter preview correto
-  quando compartilhado no WhatsApp/Instagram.
-
-  ESTE ARQUIVO agora serve só pra alimentar o CARD da listagem
-  (a página blog/index.html) — ele NÃO controla mais o conteúdo
-  do post em si. O campo "conteudo" abaixo ficou só como referência/
-  backup do texto original; editar ele não muda nada na página do post.
-
-  Pra criar um post novo, são 2 passos:
-
-  PASSO 1 — copie o bloco { ... } de um post existente (do "{" até
-  o "}," dele), cole no TOPO do array (logo depois de "const posts = [")
-  e edite os campos:
-
-  - slug:      identificador único do post, sem espaços/acentos.
-               Precisa ser IGUAL ao nome do arquivo em blog/posts/
-               (ex: slug "moxabustao-o-que-e" → arquivo
-               "blog/posts/moxabustao-o-que-e.html")
-  - titulo:    título que aparece no card da listagem
-  - resumo:    1-2 frases que aparecem no card da listagem
-  - tag:       categoria curta (ex: "Auriculoterapia", "Moxabustão")
-  - autor:     nome de quem assina (só usado como referência agora —
-               a assinatura real fica dentro do arquivo HTML do post)
-  - data:      no formato "AAAA-MM-DD" (usado pra ordenar a listagem,
-               mais recente primeiro)
-  - capa:      caminho da imagem de capa (mostrada no card)
-  - conteudo:  NÃO É MAIS USADO PRA RENDERIZAR O POST. Pode deixar
-               em branco ([]) ou preencher só como anotação sua —
-               é ignorado pela página do post.
-
-  PASSO 2 — crie o arquivo HTML do post: copie
-  blog/posts/_MODELO.html, renomeie pra blog/posts/SEU-SLUG.html,
-  e preencha os campos marcados com «...» dentro dele.
-
-  Não esqueça também de adicionar uma linha nova no sitemap.xml
-  (na raiz do repositório) com a URL do post novo — isso ajuda o
-  Google a encontrar a página mais rápido.
-
-  ===========================================================
-*/
-
 const posts = [
+  {
+    slug: "ansiedade-medicina-chinesa",
+    titulo: "Ansiedade: como a Medicina Tradicional Chinesa pode ajudar",
+    resumo: "Coração acelerado, aperto no peito, mente que não desliga: veja como a MTC entende a ansiedade e como algumas dicas simples ajudam no dia a dia.",
+    tag: "Ansiedade",
+    autor: "Erika Campos",
+    data: "2026-10-08",
+    capa: "../assets/images/txt4ansiedade.jpg",
+    conteudo: []
+  },
   {
     slug: "corpo-mente-emocoes-mtc",
     titulo: "Por que tratar o corpo, a mente e as emoções juntos",
