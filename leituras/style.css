@@ -69,7 +69,10 @@ section{padding-block:28px;}
 .post-body p{margin-bottom:20px;}
 .post-body ul{padding-left:20px;margin-bottom:20px;}
 .post-body li{margin-bottom:8px;color:var(--carvao-suave);line-height:1.65;}
-.post-figure{margin:36px 0;}
+.post-body a{color:var(--terracota);text-decoration:underline;text-underline-offset:3px;}
+@media (hover:hover){
+  .post-body a:hover{color:var(--verde-escuro);}
+}.post-figure{margin:36px 0;}
 .post-figure img{
   width:100%;border-radius:14px;object-fit:cover;max-height:480px;
   filter:sepia(.15) saturate(.9);
