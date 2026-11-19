@@ -65,6 +65,12 @@ section{padding-block:28px;}
 .post-meta .tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--terracota);font-weight:600;}
 .post-meta .date{font-size:.8rem;color:var(--carvao-suave);}
 .post-author{font-size:.85rem;color:var(--carvao-suave);font-style:italic;margin-top:10px;margin-bottom:0;}
+.post-lead{
+  font-family:'Jost',sans-serif;font-weight:300;
+  font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.4;
+  color:var(--carvao-suave);max-width:36ch;margin:14px 0 0;
+}
+.post-lead + .post-author{margin-top:18px;}
 .post-body h2{margin-top:40px;margin-bottom:16px;}
 .post-body p{margin-bottom:20px;}
 .post-body ul{padding-left:20px;margin-bottom:20px;}
