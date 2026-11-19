@@ -1,7 +1,7 @@
 const posts = [
   {
     slug: "ansiedade-medicina-chinesa",
-    titulo: "Ansiedade: como a Medicina Tradicional Chinesa pode ajudar",
+    titulo: "O que a Medicina Chinesa diz sobre a ansiedade",
     resumo: "Coração acelerado, aperto no peito, mente que não desliga: veja como a MTC entende a ansiedade e como algumas dicas simples ajudam no dia a dia.",
     tag: "Ansiedade",
     autor: "Erika Campos",
